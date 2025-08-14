@@ -1,27 +1,36 @@
-/* General Body and Container Styles */
+/* General Body and Container Styles for a cleaner, more fluent look */
 body {
-    font-family: 'Roboto', sans-serif; /* Using Google Font */
-    background-color: #F0F0F0; /* Light gray from logo background */
+    font-family: 'Roboto', sans-serif;
+    background-color: #F0F0F0;
     color: #333;
     margin: 0;
-    padding: 30px 20px; /* More padding at top/bottom */
+    padding: 30px 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center; /* Center vertically on page load for a smoother appearance */
     min-height: 100vh;
     box-sizing: border-box;
 }
 
 .container {
     background-color: #fff;
-    border-radius: 16px; /* Slightly more rounded */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); /* More pronounced, softer shadow */
-    padding: 40px; /* Increased padding */
-    max-width: 650px; /* Slightly wider */
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    padding: 40px;
+    max-width: 650px;
     width: 100%;
     text-align: center;
     margin-bottom: 40px;
-    position: relative; /* For potential future absolute positioning */
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Header & Logo */
@@ -33,21 +42,21 @@ header {
     width: 180px;
     height: auto;
     margin-bottom: 15px;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1)); /* Subtle shadow for logo */
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
 }
 
 h1 {
-    font-family: 'Merriweather', serif; /* Using Google Font */
-    font-size: 3em; /* Larger */
-    color: #2F4F4F; /* Dark green from logo */
+    font-family: 'Merriweather', serif;
+    font-size: 3em;
+    color: #2F4F4F;
     margin-bottom: 5px;
     letter-spacing: -0.5px;
 }
 
 .tagline {
-    font-size: 1em; /* Slightly larger */
-    color: #666; /* Softer gray */
-    letter-spacing: 1.8px; /* More spacing */
+    font-size: 1em;
+    color: #666;
+    letter-spacing: 1.8px;
     text-transform: uppercase;
     margin-top: 0;
     font-weight: 500;
@@ -55,42 +64,42 @@ h1 {
 
 /* Profile Section */
 .profile {
-    margin-bottom: 40px; /* More space */
-    line-height: 1.7; /* Increased line height for readability */
+    margin-bottom: 40px;
+    line-height: 1.7;
 }
 
 .profile-pic {
-    width: 130px; /* Slightly larger */
+    width: 130px;
     height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 25px; /* More space below pic */
-    border: 4px solid #2F4F4F; /* Dark green border */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Nicer shadow */
+    margin-bottom: 25px;
+    border: 4px solid #2F4F4F;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
 }
 .profile-pic:hover {
-    transform: scale(1.05); /* Subtle zoom on hover */
+    transform: scale(1.05);
 }
 
 h2 {
-    font-family: 'Merriweather', serif; /* Using Google Font */
-    font-size: 1.8em; /* Larger */
-    color: #2F4F4F; /* Dark green from logo */
-    margin-bottom: 20px; /* More space */
+    font-family: 'Merriweather', serif;
+    font-size: 1.8em;
+    color: #2F4F4F;
+    margin-bottom: 20px;
     font-weight: 700;
     line-height: 1.4;
 }
 
 .profile p {
-    font-size: 1.1em; /* Slightly larger text */
+    font-size: 1.1em;
     color: #444;
 }
 
 .process-steps {
-    font-weight: 700; /* Bolder */
-    color: #2F4F4F; /* Dark green from logo */
-    margin: 20px 0; /* More vertical space */
+    font-weight: 700;
+    color: #2F4F4F;
+    margin: 20px 0;
     font-size: 1.15em;
 }
 
@@ -101,47 +110,47 @@ h2 {
 
 .link-button {
     display: block;
-    width: calc(100% - 60px); /* Account for padding */
-    padding: 18px 30px; /* Larger padding */
-    margin: 18px auto; /* More margin between buttons */
-    background-color: #2F4F4F; /* Dark green from logo */
+    width: calc(100% - 60px);
+    padding: 18px 30px;
+    margin: 18px auto;
+    background-color: #2F4F4F;
     color: white;
     text-decoration: none;
-    border-radius: 10px; /* More rounded buttons */
-    font-size: 1.2em; /* Larger font */
+    border-radius: 10px;
+    font-size: 1.2em;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle button shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .link-button:hover {
-    background-color: #4CAF50; /* A slightly lighter, but still green, on hover */
-    transform: translateY(-3px); /* More pronounced lift */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    background-color: #4CAF50;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Social Icons Section */
 .social-icons {
     margin-top: 20px;
-    margin-bottom: 40px; /* Space above contact */
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
-    gap: 25px; /* Space between icons */
-    flex-wrap: wrap; /* Allow icons to wrap on small screens */
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .social-icons a {
-    color: #2F4F4F; /* Dark green for icons */
-    font-size: 2.2em; /* Larger icons */
+    color: #2F4F4F;
+    font-size: 2.2em;
     transition: color 0.3s ease, transform 0.2s ease;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
 
 .social-icons a:hover {
-    color: #4CAF50; /* Lighter green on hover */
-    transform: translateY(-3px); /* Lift effect */
+    color: #4CAF50;
+    transform: translateY(-3px);
 }
 
 /* Contact Section (similar styling to links) */
@@ -150,7 +159,8 @@ h2 {
 }
 
 .contact h2 {
-    font-size: 1.6em; /* Slightly smaller than main h2 */
+    font-family: 'Merriweather', serif;
+    font-size: 1.6em;
     margin-bottom: 25px;
 }
 
@@ -180,8 +190,8 @@ h2 {
 /* Footer */
 footer {
     margin-top: 40px;
-    font-size: 0.9em; /* Slightly larger */
-    color: #888; /* Softer */
+    font-size: 0.9em;
+    color: #888;
 }
 
 /* Responsive adjustments */
