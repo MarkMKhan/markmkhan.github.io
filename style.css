@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     color: #444;
-    -webkit-font-smoothing: antialiased; /* Makes text look sharper */
+    -webkit-font-smoothing: antialiased;
 }
 
 .hub-container {
@@ -16,15 +16,14 @@ body {
     text-align: center;
 }
 
-/* The Brand Header divide */
 .brand-header {
-    margin-bottom: 50px; /* Big gap to break the 'two balls' look */
+    margin-bottom: 50px;
     border-bottom: 1px solid #eee;
     padding-bottom: 20px;
 }
 
 .main-logo {
-    width: 60px; /* Smaller, elegant logo */
+    width: 60px;
     height: auto;
 }
 
@@ -38,7 +37,6 @@ body {
     font-weight: 400;
 }
 
-/* Profile Section */
 .profile-frame {
     width: 130px;
     height: 130px;
@@ -58,7 +56,7 @@ body {
 .display-name {
     font-family: 'Merriweather', serif;
     font-size: 1.8em;
-    font-weight: 300; /* Lightens the 'fat' letters */
+    font-weight: 300;
     color: #2F4F4F;
     margin: 0;
 }
@@ -79,15 +77,15 @@ body {
     margin-bottom: 40px;
 }
 
-/* Links & Buttons */
+/* BUTTONS WITH DYNAMIC HOVER */
 .btn {
     display: block;
     padding: 18px;
     margin-bottom: 14px;
     text-decoration: none;
-    border-radius: 50px; /* Rounded pill shape looks more fresh */
+    border-radius: 50px;
     font-weight: 500;
-    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .primary-btn {
@@ -96,14 +94,24 @@ body {
     box-shadow: 0 4px 15px rgba(47, 79, 79, 0.2);
 }
 
+/* Hover Effect: Lighten and Lift */
+.primary-btn:hover {
+    background-color: #3e6666; 
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(47, 79, 79, 0.3);
+}
+
 .secondary-btn {
     background-color: white;
     color: #2F4F4F;
     border: 1px solid #e0e0e0;
 }
 
-.btn:hover {
-    transform: scale(1.02);
+/* Hover Effect: Soft Grey and Lift */
+.secondary-btn:hover {
+    background-color: #f9f9f9;
+    border-color: #ccc;
+    transform: translateY(-3px);
 }
 
 .btn small {
@@ -113,7 +121,7 @@ body {
     opacity: 0.8;
 }
 
-/* Stewardship Card */
+/* Stewardship Section */
 .stewardship-group {
     margin-top: 50px;
     background: #ffffff;
@@ -141,6 +149,11 @@ body {
     display: block;
     text-decoration: none;
     padding: 12px 0;
+    transition: all 0.2s ease;
+}
+
+.steward-item:hover {
+    padding-left: 5px; /* Subtle slide effect */
 }
 
 .steward-item span {
@@ -151,15 +164,11 @@ body {
     justify-content: space-between;
 }
 
-.steward-item span::after {
-    content: '→';
-    opacity: 0.3;
-}
-
 .steward-item small {
     color: #999;
 }
 
+/* Social Icons */
 .social-fluent {
     margin-top: 50px;
     display: flex;
@@ -167,7 +176,16 @@ body {
     gap: 25px;
 }
 
-.social-fluent a { color: #2F4F4F; font-size: 1.4em; opacity: 0.4; transition: 0.3s; }
-.social-fluent a:hover { opacity: 1; }
+.social-fluent a { 
+    color: #2F4F4F; 
+    font-size: 1.4em; 
+    opacity: 0.4; 
+    transition: all 0.3s ease; 
+}
+
+.social-fluent a:hover { 
+    opacity: 1; 
+    transform: scale(1.2); /* Grows the icon on hover */
+}
 
 .copyright { font-size: 0.7em; color: #ccc; margin-top: 40px; }
