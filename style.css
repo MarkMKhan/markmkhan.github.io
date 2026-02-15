@@ -1,102 +1,101 @@
 :root {
     --brand-green: #2F4F4F;
     --hover-green: #3e6666;
-    --bg-color: #eef2f3;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color);
+    background-color: #f4f7f7; /* Soft grey-green background */
     margin: 0;
-    padding: 20px 10px;
+    padding: 40px 20px;
     display: flex;
     justify-content: center;
-    min-height: 100vh;
+    color: #333;
 }
 
-.hub-card {
+.hub-container {
     max-width: 400px;
     width: 100%;
-    background: #ffffff;
-    padding: 30px 20px;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background: white;
+    padding: 40px 30px;
+    border-radius: 32px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
     text-align: center;
     box-sizing: border-box;
 }
 
-/* Header & Profile */
-.main-logo { width: 45px; height: auto; margin-bottom: 5px; }
+/* Header */
+.main-logo { width: 50px; margin-bottom: 8px; }
 .logo-text {
     font-family: 'Merriweather', serif;
-    font-size: 0.8em;
+    font-size: 0.85em;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--brand-green);
-    margin: 0 0 30px 0;
+    margin: 0 0 40px 0;
+    font-weight: 400;
 }
 
+/* Profile */
 .profile-frame {
-    width: 100px;
-    height: 100px;
+    width: 115px;
+    height: 115px;
     margin: 0 auto 15px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 3px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 .profile-pic { width: 100%; height: 100%; object-fit: cover; }
-
-.display-name { font-family: 'Merriweather', serif; font-size: 1.5em; color: var(--brand-green); margin: 0; font-weight: 300; }
-.facilitator-title { font-size: 0.65em; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin: 5px 0; }
-.tagline { font-size: 0.85em; font-style: italic; color: #777; margin-bottom: 30px; }
+.display-name { font-family: 'Merriweather', serif; font-size: 1.6em; color: var(--brand-green); margin: 0; font-weight: 300; }
+.facilitator-title { font-size: 0.7em; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin: 8px 0; }
+.tagline { font-size: 0.9em; font-style: italic; color: #777; margin-bottom: 35px; }
 
 /* Buttons */
-.link-stack { display: flex; flex-direction: column; gap: 12px; }
-
 .btn {
+    display: block;
     text-decoration: none;
     padding: 16px;
-    border-radius: 12px;
+    margin-bottom: 12px;
+    border-radius: 50px;
     font-weight: 500;
-    transition: 0.3s;
-    display: block;
+    transition: all 0.3s ease;
 }
-
-.btn span { display: block; font-size: 0.7em; font-weight: 400; margin-top: 4px; opacity: 0.9; }
 
 .primary-btn { background-color: var(--brand-green); color: white; }
 .primary-btn:hover { background-color: var(--hover-green); transform: translateY(-2px); }
 
-.secondary-btn { background-color: #f8fafa; color: var(--brand-green); border: 1px solid #e0e6e6; }
+.secondary-btn { background-color: white; color: var(--brand-green); border: 1px solid #e0e0e0; }
 .secondary-btn:hover { background-color: var(--brand-green); color: white; border-color: var(--brand-green); }
 
-/* Stewardship Row */
-.stewardship-section { margin-top: 30px; border-top: 1px solid #f0f0f0; padding-top: 20px; }
-.label { font-family: 'Merriweather', serif; font-size: 0.85em; color: var(--brand-green); margin-bottom: 15px; }
-.sub-label { font-size: 0.7em; color: #bbb; margin-top: -10px; margin-bottom: 15px; }
+.btn small { display: block; font-size: 0.7em; font-weight: 400; opacity: 0.8; margin-top: 2px; }
 
-.steward-row { display: flex; gap: 10px; justify-content: center; }
+/* Stewardship Section */
+.stewardship-zone { margin-top: 35px; border-top: 1px solid #f0f0f0; padding-top: 25px; }
+.section-label { font-family: 'Merriweather', serif; font-size: 0.9em; color: var(--brand-green); margin-bottom: 15px; }
 
-.steward-card {
-    flex: 1;
+.steward-link {
+    display: block;
     text-decoration: none;
-    background: #ffffff;
-    border: 1px solid #eee;
-    padding: 12px 5px;
+    padding: 12px;
+    margin-bottom: 8px;
     border-radius: 12px;
-    transition: 0.3s;
+    color: #666;
+    transition: all 0.3s;
 }
 
-.steward-card strong { display: block; font-size: 0.75em; color: var(--brand-green); }
-.steward-card small { font-size: 0.6em; color: #999; }
+.steward-link span { font-size: 0.9em; font-weight: 500; }
+.steward-link small { font-weight: 400; opacity: 0.6; }
 
-.steward-card:hover { background: var(--brand-green); border-color: var(--brand-green); }
-.steward-card:hover strong, .steward-card:hover small { color: white; }
+/* The Green Contrast Bloom */
+.steward-link:hover {
+    background-color: var(--brand-green);
+    color: white;
+}
 
 /* Socials */
-.social-links { margin-top: 30px; display: flex; justify-content: center; gap: 20px; }
-.social-links a { color: #ccc; font-size: 1.2em; transition: 0.3s; }
-.social-links a:hover { color: var(--brand-green); transform: scale(1.1); }
+.social-fluent { margin-top: 40px; display: flex; justify-content: center; gap: 20px; }
+.social-fluent a { color: #ccc; font-size: 1.3em; transition: 0.3s; }
+.social-fluent a:hover { color: var(--brand-green); transform: scale(1.1); }
 
-.copyright { font-size: 0.65em; color: #ccc; margin-top: 25px; }
+.copyright { font-size: 0.7em; color: #ddd; margin-top: 35px; }
