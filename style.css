@@ -1,14 +1,13 @@
 /* General Body + Container */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f6f1ea; /* softer off-white for subtle warmth */
+    background-color: #f6f1ea; /* warm, soft off-white */
     color: #444;
     margin: 0;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
 }
-
 .container {
     max-width: 600px;
     width: 100%;
@@ -27,30 +26,9 @@ h1 {
     margin: 0;
 }
 .tagline {
-    font-size: 0.9em;
+    font-size: 0.95em;
     font-style: italic;
     color: #666;
-    margin-bottom: 30px;
-}
-
-/* Profile */
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 2px solid #2f4f4a;
-    padding: 5px;
-    margin-bottom: 15px;
-    object-fit: cover;
-}
-h2 {
-    font-family: 'Merriweather', serif;
-    font-size: 1.5em;
-    margin: 0;
-}
-.bio-text {
-    font-size: 1.05em;
-    line-height: 1.7;
     margin-bottom: 40px;
 }
 
@@ -61,14 +39,17 @@ h2 {
     color: #2f4f4a;
     border-bottom: 1px solid #ddd;
     padding-bottom: 8px;
-    margin: 40px 0 20px;
+    margin-bottom: 20px;
 }
 
-/* Links */
+/* Link Hub */
+.link-hub .hub-section {
+    margin-bottom: 30px;
+}
 .link-button {
-    display: inline-block;
+    display: block;
     padding: 16px 22px;
-    margin-top: 15px;
+    margin: 12px 0;
     text-decoration: none;
     color: #fff;
     background-color: #2f4f4a;
@@ -79,37 +60,10 @@ h2 {
 .link-button:hover {
     background-color: #3b5d58;
 }
-
-/* Group Intro List */
-.group-list {
-    list-style-type: disc;
-    padding-left: 20px;
-    text-align: left;
-    margin-bottom: 20px;
-}
-.group-list li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-/* Steward Boxes */
-.steward-box {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    text-align: left;
-}
-.steward-box strong {
-    color: #2f4f4a;
-    display: block;
-    margin-bottom: 3px;
-}
-.steward-box p {
-    margin: 0;
-    font-size: 0.95em;
+.link-desc {
+    font-size: 0.85em;
     color: #666;
+    margin-bottom: 12px;
 }
 
 /* Social Icons */
@@ -126,32 +80,9 @@ h2 {
     color: #3b5d58;
 }
 
-/* Contact */
-.contact-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-.contact-icon-link {
-    text-decoration: none;
-    color: #2f4f4a;
-    font-weight: 500;
-    font-size: 0.95em;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
 /* Footer */
 footer {
-    margin-top: 60px;
+    margin-top: 40px;
     font-size: 0.85em;
     color: #888;
-}
-
-/* Small Text */
-.small-text {
-    font-size: 0.85em;
-    color: #666;
 }
