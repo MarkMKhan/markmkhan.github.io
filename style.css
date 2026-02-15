@@ -1,6 +1,6 @@
-   body {
+body {
     font-family: 'Roboto', sans-serif;
-    background-color: #fcfcfc; /* Softer white */
+    background-color: #fcfcfc;
     color: #444;
     margin: 0;
     padding: 40px 20px;
@@ -40,6 +40,7 @@ h1 {
     border: 2px solid #2F4F4F;
     padding: 5px;
     margin-bottom: 15px;
+    object-fit: cover;
 }
 
 h2 {
@@ -99,16 +100,30 @@ h2 {
     border: none;
 }
 
-.tool-link {
-    font-size: 0.95em;
-    border-color: #ccc;
-    color: #777;
+.steward-box {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.steward-box strong {
+    color: #2F4F4F;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.steward-box p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
 }
 
 .small-text {
     font-size: 0.85em;
     color: #888;
-    margin-top: -10px;
     margin-bottom: 15px;
 }
 
@@ -131,6 +146,7 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .contact-icon-link {
@@ -138,6 +154,9 @@ h2 {
     color: #2F4F4F;
     font-weight: 500;
     font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 footer {
