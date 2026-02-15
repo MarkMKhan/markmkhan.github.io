@@ -1,20 +1,16 @@
 :root {
-    --primary-green: #2F4F4F;
-    --hover-green: #3e6666;
-    --soft-white: #fcfcfc;
-    --text-main: #333;
-    --text-muted: #777;
+    --primary-green: #2F4F4F !important;
+    --hover-green: #3e6666 !important;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--soft-white);
+    background-color: #fcfcfc;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    color: var(--text-main);
-    -webkit-font-smoothing: antialiased;
+    color: #333;
 }
 
 .hub-container {
@@ -24,16 +20,9 @@ body {
     text-align: center;
 }
 
-.brand-header {
-    margin-bottom: 60px;
-}
-
-.main-logo {
-    width: 50px;
-    height: auto;
-    opacity: 0.85;
-}
-
+/* Brand Header */
+.brand-header { margin-bottom: 50px; }
+.main-logo { width: 50px; opacity: 0.9; }
 .logo-text {
     font-family: 'Merriweather', serif;
     font-size: 0.85em;
@@ -41,50 +30,23 @@ body {
     text-transform: uppercase;
     color: var(--primary-green);
     margin-top: 12px;
-    font-weight: 400;
 }
 
+/* Profile */
 .profile-frame {
     width: 120px;
     height: 120px;
-    margin: 0 auto 24px;
+    margin: 0 auto 20px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid white;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
+.profile-pic { width: 100%; height: 100%; object-fit: cover; }
+.display-name { font-family: 'Merriweather', serif; font-size: 1.6em; font-weight: 300; color: var(--primary-green); margin: 0; }
+.facilitator-title { font-size: 0.7em; font-weight: 600; text-transform: uppercase; color: #777; margin: 10px 0; }
 
-.profile-pic {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.display-name {
-    font-family: 'Merriweather', serif;
-    font-size: 1.6em;
-    font-weight: 300;
-    color: var(--primary-green);
-    margin: 0;
-}
-
-.facilitator-title {
-    font-size: 0.7em;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--text-muted);
-    margin: 10px 0;
-}
-
-.tagline {
-    font-size: 0.9em;
-    font-style: italic;
-    color: #666;
-    margin-bottom: 45px;
-}
-
-/* BUTTONS */
+/* DYNAMIC BUTTONS */
 .btn {
     display: block;
     padding: 18px 24px;
@@ -92,126 +54,58 @@ body {
     text-decoration: none;
     border-radius: 50px;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out !important;
 }
 
-/* Primary: Solid Green -> Deeper Green */
+/* Primary Button */
 .primary-btn {
-    background-color: var(--primary-green);
-    color: white;
-    border: 2px solid var(--primary-green);
+    background-color: var(--primary-green) !important;
+    color: white !important;
+    border: 2px solid var(--primary-green) !important;
 }
-
 .primary-btn:hover {
-    background-color: var(--hover-green);
-    border-color: var(--hover-green);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(47, 79, 79, 0.25);
+    background-color: var(--hover-green) !important;
+    transform: translateY(-3px);
 }
 
-/* Secondary: White/Grey -> White/Green Contrast */
+/* Secondary Button - This should turn Green on Hover */
 .secondary-btn {
-    background-color: white;
-    color: var(--text-muted);
-    border: 1px solid #ddd;
+    background-color: white !important;
+    color: #777 !important;
+    border: 1px solid #ddd !important;
 }
-
 .secondary-btn:hover {
-    color: var(--primary-green);
-    border-color: var(--primary-green);
-    background-color: #f0f7f7; /* Very subtle green tint */
-    transform: translateY(-2px);
+    color: var(--primary-green) !important;
+    border-color: var(--primary-green) !important;
+    background-color: #f0f7f7 !important;
+    transform: translateY(-3px);
 }
 
-.btn small {
-    display: block;
-    font-size: 0.75em;
-    font-weight: 400;
-    margin-top: 4px;
-}
-
-/* STEWARDSHIP */
+/* Stewardship Items */
 .stewardship-group {
-    margin-top: 50px;
+    margin-top: 40px;
     background: white;
     border-radius: 20px;
-    padding: 30px 24px;
-    text-align: left;
+    padding: 25px;
     border: 1px solid #f0f0f0;
+    text-align: left;
 }
-
-.label {
-    font-family: 'Merriweather', serif;
-    font-size: 0.9em;
-    text-align: center;
-    color: var(--primary-green);
-    margin-bottom: 8px;
-}
-
-.sub-label {
-    font-size: 0.75em;
-    text-align: center;
-    color: #bbb;
-    margin-bottom: 25px;
-}
-
 .steward-item {
     display: block;
     text-decoration: none;
-    padding: 15px 12px;
-    border-radius: 12px;
-    margin-bottom: 5px;
+    padding: 12px;
     transition: 0.3s;
+    border-radius: 10px;
 }
-
-/* Stewardship Hover: Turns text and icon Green */
 .steward-item:hover {
-    background-color: #f9fbfb;
+    background-color: #f9fbfb !important;
 }
+.steward-item span { color: #333; font-weight: 500; transition: 0.3s; }
+.steward-item:hover span { color: var(--primary-green) !important; }
 
-.steward-item span {
-    color: var(--text-main);
-    font-weight: 500;
-    font-size: 0.9em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: color 0.3s ease;
-}
-
-.steward-item:hover span {
-    color: var(--primary-green);
-}
-
-.steward-item span i {
-    font-size: 0.75em;
-    opacity: 0.2;
-    transition: 0.3s;
-}
-
-.steward-item:hover span i {
-    opacity: 0.8;
-    transform: translateX(3px);
-}
-
-.steward-item small {
-    color: #999;
-}
-
-/* SOCIALS */
-.social-fluent {
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
+/* Social Icons */
+.social-fluent { margin-top: 50px; display: flex; justify-content: center; gap: 25px; }
 .social-fluent a { color: #ccc; font-size: 1.4em; transition: 0.3s; }
+.social-fluent a:hover { color: var(--primary-green) !important; transform: scale(1.2); }
 
-/* Social Hover: Changes to Brand Green */
-.social-fluent a:hover { 
-    color: var(--primary-green); 
-    transform: scale(1.2); 
-}
-
-.copyright { font-size: 0.7em; color: #ccc; margin-top: 50px; padding-bottom: 20px; }
+.copyright { font-size: 0.7em; color: #ccc; margin-top: 40px; }
