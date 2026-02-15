@@ -1,8 +1,4 @@
-:root {
-    --primary-green: #2F4F4F !important;
-    --hover-green: #3e6666 !important;
-}
-
+/* RESET */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #fcfcfc;
@@ -14,74 +10,69 @@ body {
 }
 
 .hub-container {
-    max-width: 420px;
+    max-width: 400px;
     width: 100%;
-    padding: 50px 24px;
+    padding: 50px 20px;
     text-align: center;
 }
 
-/* Brand Header */
-.brand-header { margin-bottom: 50px; }
-.main-logo { width: 50px; opacity: 0.9; }
+/* BRANDING */
+.main-logo { width: 50px; margin-bottom: 10px; }
 .logo-text {
     font-family: 'Merriweather', serif;
     font-size: 0.85em;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--primary-green);
-    margin-top: 12px;
+    color: #2F4F4F;
+    margin-bottom: 50px;
 }
 
-/* Profile */
+/* PROFILE */
 .profile-frame {
     width: 120px;
     height: 120px;
-    margin: 0 auto 20px;
+    margin: 0 auto 15px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 .profile-pic { width: 100%; height: 100%; object-fit: cover; }
-.display-name { font-family: 'Merriweather', serif; font-size: 1.6em; font-weight: 300; color: var(--primary-green); margin: 0; }
-.facilitator-title { font-size: 0.7em; font-weight: 600; text-transform: uppercase; color: #777; margin: 10px 0; }
+.display-name { font-family: 'Merriweather', serif; font-size: 1.6em; color: #2F4F4F; margin: 0; font-weight: 300; }
+.facilitator-title { font-size: 0.7em; letter-spacing: 2px; text-transform: uppercase; color: #888; margin: 10px 0; }
+.tagline { font-size: 0.9em; font-style: italic; color: #666; margin-bottom: 40px; }
 
 /* DYNAMIC BUTTONS */
 .btn {
     display: block;
-    padding: 18px 24px;
-    margin-bottom: 16px;
+    padding: 18px;
+    margin-bottom: 15px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 500;
-    transition: all 0.3s ease-in-out !important;
+    transition: 0.3s;
 }
 
-/* Primary Button */
+/* Primary Button - Stays Green */
 .primary-btn {
-    background-color: var(--primary-green) !important;
-    color: white !important;
-    border: 2px solid var(--primary-green) !important;
-}
-.primary-btn:hover {
-    background-color: var(--hover-green) !important;
-    transform: translateY(-3px);
+    background-color: #2F4F4F;
+    color: white;
+    border: 2px solid #2F4F4F;
 }
 
-/* Secondary Button - This should turn Green on Hover */
+/* Secondary Button - Turns Green on Hover */
 .secondary-btn {
-    background-color: white !important;
-    color: #777 !important;
-    border: 1px solid #ddd !important;
+    background-color: white;
+    color: #777;
+    border: 1px solid #ddd;
 }
 .secondary-btn:hover {
-    color: var(--primary-green) !important;
-    border-color: var(--primary-green) !important;
+    color: #2F4F4F !important;
+    border-color: #2F4F4F !important;
     background-color: #f0f7f7 !important;
-    transform: translateY(-3px);
 }
 
-/* Stewardship Items */
+/* STEWARDSHIP */
 .stewardship-group {
     margin-top: 40px;
     background: white;
@@ -93,19 +84,15 @@ body {
 .steward-item {
     display: block;
     text-decoration: none;
-    padding: 12px;
+    padding: 10px;
     transition: 0.3s;
-    border-radius: 10px;
 }
-.steward-item:hover {
-    background-color: #f9fbfb !important;
-}
-.steward-item span { color: #333; font-weight: 500; transition: 0.3s; }
-.steward-item:hover span { color: var(--primary-green) !important; }
+.steward-item span { color: #444; font-weight: 500; }
+.steward-item:hover span { color: #2F4F4F !important; }
 
-/* Social Icons */
+/* SOCIALS */
 .social-fluent { margin-top: 50px; display: flex; justify-content: center; gap: 25px; }
 .social-fluent a { color: #ccc; font-size: 1.4em; transition: 0.3s; }
-.social-fluent a:hover { color: var(--primary-green) !important; transform: scale(1.2); }
+.social-fluent a:hover { color: #2F4F4F !important; }
 
 .copyright { font-size: 0.7em; color: #ccc; margin-top: 40px; }
