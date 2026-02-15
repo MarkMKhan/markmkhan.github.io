@@ -1,6 +1,7 @@
+/* General Body + Container */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #fcfcfc;
+    background-color: #f6f1ea; /* softer off-white for subtle warmth */
     color: #444;
     margin: 0;
     padding: 40px 20px;
@@ -9,23 +10,22 @@ body {
 }
 
 .container {
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     text-align: center;
 }
 
+/* Header */
 .logo {
     width: 120px;
     margin-bottom: 20px;
 }
-
 h1 {
     font-family: 'Merriweather', serif;
     font-size: 2.2em;
-    color: #2F4F4F;
+    color: #2f4f4a;
     margin: 0;
 }
-
 .tagline {
     font-size: 0.9em;
     font-style: italic;
@@ -33,134 +33,125 @@ h1 {
     margin-bottom: 30px;
 }
 
+/* Profile */
 .profile-pic {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 2px solid #2F4F4F;
+    border: 2px solid #2f4f4a;
     padding: 5px;
     margin-bottom: 15px;
     object-fit: cover;
 }
-
 h2 {
     font-family: 'Merriweather', serif;
     font-size: 1.5em;
     margin: 0;
 }
-
-.facilitator-title {
-    font-weight: 500;
-    color: #2F4F4F;
-    margin-top: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.85em;
-}
-
 .bio-text {
     font-size: 1.05em;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 40px;
 }
 
+/* Section Labels */
 .section-label {
     font-family: 'Merriweather', serif;
     font-size: 1.1em;
-    color: #2F4F4F;
-    border-bottom: 1px solid #eee;
+    color: #2f4f4a;
+    border-bottom: 1px solid #ddd;
     padding-bottom: 8px;
-    margin: 30px 0 15px 0;
+    margin: 40px 0 20px;
 }
 
+/* Links */
 .link-button {
-    display: block;
-    padding: 16px;
-    margin-bottom: 12px;
+    display: inline-block;
+    padding: 16px 22px;
+    margin-top: 15px;
     text-decoration: none;
-    color: #2F4F4F;
-    border: 1px solid #2F4F4F;
+    color: #fff;
+    background-color: #2f4f4a;
     border-radius: 8px;
     font-weight: 500;
     transition: 0.3s;
 }
-
 .link-button:hover {
-    background-color: #2F4F4F;
-    color: #fff;
+    background-color: #3b5d58;
 }
 
-.highlight {
-    background-color: #2F4F4F;
-    color: #fff;
+/* Group Intro List */
+.group-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.group-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
-.secondary {
-    background-color: #f0f4f4;
-    border: none;
-}
-
+/* Steward Boxes */
 .steward-box {
     background: #fff;
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
     padding: 15px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     text-align: left;
 }
-
 .steward-box strong {
-    color: #2F4F4F;
+    color: #2f4f4a;
     display: block;
     margin-bottom: 3px;
 }
-
 .steward-box p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #666;
 }
 
-.small-text {
-    font-size: 0.85em;
-    color: #888;
-    margin-bottom: 15px;
-}
-
+/* Social Icons */
 .social-icons {
     margin: 40px 0;
 }
-
 .social-icons a {
-    color: #2F4F4F;
-    font-size: 1.5em;
+    color: #2f4f4a;
+    font-size: 1.6em;
     margin: 0 12px;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
-
 .social-icons a:hover {
-    color: #4CAF50;
+    color: #3b5d58;
 }
 
+/* Contact */
 .contact-grid {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
-
 .contact-icon-link {
     text-decoration: none;
-    color: #2F4F4F;
+    color: #2f4f4a;
     font-weight: 500;
-    font-size: 0.9em;
+    font-size: 0.95em;
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
+/* Footer */
 footer {
     margin-top: 60px;
-    font-size: 0.8em;
-    color: #aaa;
+    font-size: 0.85em;
+    color: #888;
+}
+
+/* Small Text */
+.small-text {
+    font-size: 0.85em;
+    color: #666;
 }
