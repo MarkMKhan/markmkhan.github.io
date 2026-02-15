@@ -1,22 +1,29 @@
 :root {
     --brand-green: #2F4F4F;
-    --hover-bright: #3e6666;
+    --soft-bg: #f3f5f5;
+    --card-white: #ffffff;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #fcfcfc;
+    /* This gradient gives it the "Hub" feel vs a plain white page */
+    background: linear-gradient(135deg, #eef2f3 0%, #dce9e9 100%);
     margin: 0;
-    padding: 0;
+    padding: 40px 15px;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
     color: #333;
 }
 
-.hub-container {
-    max-width: 420px;
+.hub-card {
+    max-width: 400px;
     width: 100%;
-    padding: 60px 24px;
+    background-color: var(--card-white);
+    padding: 40px 25px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     text-align: center;
 }
 
@@ -25,107 +32,94 @@ body {
 .logo-text {
     font-family: 'Merriweather', serif;
     font-size: 0.8em;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--brand-green);
-    margin-bottom: 60px;
+    margin: 0 0 40px 0;
     font-weight: 400;
 }
 
 /* PROFILE */
 .profile-frame {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     margin: 0 auto 15px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border: 3px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .profile-pic { width: 100%; height: 100%; object-fit: cover; }
-.display-name { font-family: 'Merriweather', serif; font-size: 1.7em; color: var(--brand-green); margin: 0; font-weight: 300; }
-.facilitator-title { font-size: 0.65em; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #999; margin: 10px 0; }
-.tagline { font-size: 0.9em; font-style: italic; color: #777; margin-bottom: 40px; }
+.display-name { font-family: 'Merriweather', serif; font-size: 1.5em; color: var(--brand-green); margin: 0; font-weight: 300; }
+.facilitator-title { font-size: 0.65em; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin: 8px 0; }
+.tagline { font-size: 0.85em; font-style: italic; color: #777; margin-bottom: 35px; }
 
-/* HIGH CONTRAST BUTTONS */
+/* BUTTONS */
 .btn {
     display: block;
-    padding: 18px;
-    margin-bottom: 16px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 15px;
     font-weight: 500;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
-/* Primary Button: Solid -> Deep Glow */
 .primary-btn {
     background-color: var(--brand-green);
     color: white;
-    border: 2px solid var(--brand-green);
-}
-.primary-btn:hover {
-    background-color: var(--hover-bright);
-    border-color: var(--hover-bright);
-    transform: translateY(-2px);
 }
 
-/* Secondary Button: White/Green Outline -> Solid Green Fill */
 .secondary-btn {
-    background-color: transparent;
+    background-color: #f9fbfb;
     color: var(--brand-green);
-    border: 2px solid var(--brand-green);
+    border: 1px solid #e0eaea;
 }
-.secondary-btn:hover {
-    background-color: var(--brand-green);
-    color: white !important; /* Strong contrast flip */
+
+.btn:hover {
     transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 5px 15px rgba(47, 79, 79, 0.15);
 }
 
-.btn small { display: block; font-size: 0.75em; font-weight: 400; opacity: 0.8; }
+.btn small { display: block; font-size: 0.7em; opacity: 0.8; margin-top: 3px; }
 
-/* STEWARDSHIP */
-.stewardship-group {
-    margin-top: 50px;
-    background: white;
-    border-radius: 24px;
-    padding: 30px 20px;
+/* STEWARDSHIP GRID (The "Tile" look) */
+.stewardship-section {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #f0f0f0;
+}
+.label { font-family: 'Merriweather', serif; font-size: 0.9em; color: var(--brand-green); margin: 0; }
+.sub-label { font-size: 0.75em; color: #bbb; margin-bottom: 15px; }
+
+.steward-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.steward-card {
+    background: #fdfdfd;
     border: 1px solid #eee;
-    text-align: left;
-}
-.label { font-family: 'Merriweather', serif; font-size: 0.9em; text-align: center; color: var(--brand-green); margin: 0 0 5px 0; }
-.sub-label { font-size: 0.75em; text-align: center; color: #bbb; margin-bottom: 25px; }
-
-.steward-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-decoration: none;
-    padding: 14px 18px;
-    margin-bottom: 8px;
+    padding: 15px 10px;
     border-radius: 15px;
+    text-decoration: none;
     transition: all 0.3s ease;
-    border: 1px solid transparent;
 }
 
-/* Stewardship Item: Clear -> Solid Green Fill */
-.steward-item:hover {
+.steward-card span { display: block; font-size: 0.8em; font-weight: 600; color: var(--brand-green); margin-bottom: 4px; }
+.steward-card small { display: block; font-size: 0.65em; color: #999; line-height: 1.2; }
+
+.steward-card:hover {
     background-color: var(--brand-green);
-    transform: scale(1.02);
+    border-color: var(--brand-green);
 }
-
-.steward-item span { color: var(--brand-green); font-weight: 500; font-size: 0.9em; transition: color 0.3s; }
-.steward-item small { color: #999; font-size: 0.8em; transition: color 0.3s; }
-.steward-item i { color: var(--brand-green); font-size: 0.8em; opacity: 0.3; transition: all 0.3s; }
-
-.steward-item:hover span, 
-.steward-item:hover small { color: white; }
-.steward-item:hover i { color: white; opacity: 1; transform: rotate(90deg); }
+.steward-card:hover span, .steward-card:hover small { color: #ffffff; }
 
 /* SOCIALS */
-.social-fluent { margin-top: 60px; display: flex; justify-content: center; gap: 30px; }
-.social-fluent a { color: #ccc; font-size: 1.4em; transition: all 0.3s; }
-.social-fluent a:hover { color: var(--brand-green); transform: translateY(-5px) scale(1.1); }
+.social-fluent { margin-top: 40px; display: flex; justify-content: center; gap: 20px; }
+.social-fluent a { color: #ccc; font-size: 1.2em; transition: 0.3s; }
+.social-fluent a:hover { color: var(--brand-green); transform: scale(1.1); }
 
-.copyright { font-size: 0.7em; color: #ddd; margin-top: 50px; padding-bottom: 20px; }
+.copyright { font-size: 0.65em; color: #ccc; margin-top: 30px; }
