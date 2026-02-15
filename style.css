@@ -1,50 +1,58 @@
+:root {
+    --primary-green: #2F4F4F;
+    --soft-white: #fcfcfc;
+    --text-main: #333;
+    --text-muted: #777;
+}
+
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #fcfcfc;
+    background-color: var(--soft-white);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    color: #444;
+    color: var(--text-main);
     -webkit-font-smoothing: antialiased;
 }
 
 .hub-container {
-    max-width: 400px;
+    max-width: 420px;
     width: 100%;
-    padding: 40px 24px;
+    padding: 50px 24px;
     text-align: center;
 }
 
+/* BRAND HEADER: Proportionate and airy */
 .brand-header {
-    margin-bottom: 50px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .main-logo {
-    width: 60px;
+    width: 50px; /* Reduced for better proportion */
     height: auto;
+    opacity: 0.85;
 }
 
 .logo-text {
     font-family: 'Merriweather', serif;
-    font-size: 1.1em;
-    letter-spacing: 2px;
+    font-size: 0.9em; /* Smaller to let 'Mark Khan' be the focus */
+    letter-spacing: 3px;
     text-transform: uppercase;
-    color: #2F4F4F;
-    margin-top: 10px;
+    color: var(--primary-green);
+    margin-top: 12px;
     font-weight: 400;
 }
 
+/* PROFILE SECTION: The focal point */
 .profile-frame {
-    width: 130px;
-    height: 130px;
-    margin: 0 auto 20px;
+    width: 125px;
+    height: 125px;
+    margin: 0 auto 24px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 3px solid white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
 .profile-pic {
@@ -55,137 +63,145 @@ body {
 
 .display-name {
     font-family: 'Merriweather', serif;
-    font-size: 1.8em;
+    font-size: 1.6em; /* Balanced size */
     font-weight: 300;
-    color: #2F4F4F;
+    color: var(--primary-green);
     margin: 0;
 }
 
 .facilitator-title {
-    font-size: 0.75em;
-    font-weight: 500;
+    font-size: 0.7em;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #888;
-    margin: 8px 0;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin: 10px 0;
 }
 
 .tagline {
-    font-size: 0.95em;
+    font-size: 0.9em;
     font-style: italic;
     color: #666;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
-/* BUTTONS WITH DYNAMIC HOVER */
+/* INTERACTIVE BUTTONS: The "Invert" Effect */
 .btn {
     display: block;
-    padding: 18px;
-    margin-bottom: 14px;
+    padding: 18px 24px;
+    margin-bottom: 16px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 500;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.4s ease;
+    box-sizing: border-box;
 }
 
+/* Primary: Green Outline -> Full Green */
 .primary-btn {
-    background-color: #2F4F4F;
-    color: white;
-    box-shadow: 0 4px 15px rgba(47, 79, 79, 0.2);
+    background-color: transparent;
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
 }
 
-/* Hover Effect: Lighten and Lift */
 .primary-btn:hover {
-    background-color: #3e6666; 
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(47, 79, 79, 0.3);
+    background-color: var(--primary-green);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(47, 79, 79, 0.2);
 }
 
+/* Secondary: Muted Outline -> Green Outline */
 .secondary-btn {
-    background-color: white;
-    color: #2F4F4F;
-    border: 1px solid #e0e0e0;
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1px solid #ddd;
 }
 
-/* Hover Effect: Soft Grey and Lift */
 .secondary-btn:hover {
-    background-color: #f9f9f9;
-    border-color: #ccc;
-    transform: translateY(-3px);
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+    transform: translateY(-2px);
 }
 
 .btn small {
     display: block;
-    font-size: 0.7em;
+    font-size: 0.75em;
     font-weight: 400;
-    opacity: 0.8;
+    margin-top: 4px;
 }
 
-/* Stewardship Section */
+/* STEWARDSHIP: Refined and "Hidden until Hover" feel */
 .stewardship-group {
     margin-top: 50px;
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 24px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px 24px;
     text-align: left;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
 }
 
 .label {
     font-family: 'Merriweather', serif;
     font-size: 0.9em;
     text-align: center;
-    color: #2F4F4F;
+    color: var(--primary-green);
+    margin-bottom: 8px;
 }
 
 .sub-label {
     font-size: 0.75em;
     text-align: center;
-    color: #aaa;
-    margin-bottom: 20px;
+    color: #bbb;
+    margin-bottom: 25px;
 }
 
 .steward-item {
     display: block;
     text-decoration: none;
-    padding: 12px 0;
-    transition: all 0.2s ease;
+    padding: 15px 0;
+    border-bottom: 1px solid #f9f9f9;
+    transition: 0.3s;
 }
 
-.steward-item:hover {
-    padding-left: 5px; /* Subtle slide effect */
-}
+.steward-item:last-child { border: none; }
 
 .steward-item span {
-    color: #2F4F4F;
+    color: var(--primary-green);
     font-weight: 500;
     font-size: 0.9em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.steward-item span i {
+    font-size: 0.7em;
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateX(-10px);
+}
+
+.steward-item:hover span i {
+    opacity: 0.5;
+    transform: translateX(0);
 }
 
 .steward-item small {
     color: #999;
+    display: block;
+    margin-top: 2px;
 }
 
-/* Social Icons */
+/* SOCIALS: Fluent and growing */
 .social-fluent {
-    margin-top: 50px;
+    margin-top: 60px;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
 }
 
-.social-fluent a { 
-    color: #2F4F4F; 
-    font-size: 1.4em; 
-    opacity: 0.4; 
-    transition: all 0.3s ease; 
-}
+.social-fluent a { color: var(--primary-green); font-size: 1.4em; opacity: 0.3; transition: 0.4s; }
+.social-fluent a:hover { opacity: 1; transform: scale(1.2); }
 
-.social-fluent a:hover { 
-    opacity: 1; 
-    transform: scale(1.2); /* Grows the icon on hover */
-}
-
-.copyright { font-size: 0.7em; color: #ccc; margin-top: 40px; }
+.copyright { font-size: 0.7em; color: #ccc; margin-top: 50px; padding-bottom: 20px; }
