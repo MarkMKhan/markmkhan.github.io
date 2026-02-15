@@ -1,5 +1,6 @@
 :root {
     --primary-green: #2F4F4F;
+    --hover-green: #3e6666;
     --soft-white: #fcfcfc;
     --text-main: #333;
     --text-muted: #777;
@@ -23,20 +24,19 @@ body {
     text-align: center;
 }
 
-/* BRAND HEADER: Proportionate and airy */
 .brand-header {
     margin-bottom: 60px;
 }
 
 .main-logo {
-    width: 50px; /* Reduced for better proportion */
+    width: 50px;
     height: auto;
     opacity: 0.85;
 }
 
 .logo-text {
     font-family: 'Merriweather', serif;
-    font-size: 0.9em; /* Smaller to let 'Mark Khan' be the focus */
+    font-size: 0.85em;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--primary-green);
@@ -44,10 +44,9 @@ body {
     font-weight: 400;
 }
 
-/* PROFILE SECTION: The focal point */
 .profile-frame {
-    width: 125px;
-    height: 125px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto 24px;
     border-radius: 50%;
     overflow: hidden;
@@ -63,7 +62,7 @@ body {
 
 .display-name {
     font-family: 'Merriweather', serif;
-    font-size: 1.6em; /* Balanced size */
+    font-size: 1.6em;
     font-weight: 300;
     color: var(--primary-green);
     margin: 0;
@@ -85,7 +84,7 @@ body {
     margin-bottom: 45px;
 }
 
-/* INTERACTIVE BUTTONS: The "Invert" Effect */
+/* BUTTONS */
 .btn {
     display: block;
     padding: 18px 24px;
@@ -93,34 +92,34 @@ body {
     text-decoration: none;
     border-radius: 50px;
     font-weight: 500;
-    transition: all 0.4s ease;
-    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
-/* Primary: Green Outline -> Full Green */
+/* Primary: Solid Green -> Deeper Green */
 .primary-btn {
-    background-color: transparent;
-    color: var(--primary-green);
+    background-color: var(--primary-green);
+    color: white;
     border: 2px solid var(--primary-green);
 }
 
 .primary-btn:hover {
-    background-color: var(--primary-green);
-    color: white;
+    background-color: var(--hover-green);
+    border-color: var(--hover-green);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(47, 79, 79, 0.2);
+    box-shadow: 0 8px 20px rgba(47, 79, 79, 0.25);
 }
 
-/* Secondary: Muted Outline -> Green Outline */
+/* Secondary: White/Grey -> White/Green Contrast */
 .secondary-btn {
-    background-color: transparent;
+    background-color: white;
     color: var(--text-muted);
     border: 1px solid #ddd;
 }
 
 .secondary-btn:hover {
-    border-color: var(--primary-green);
     color: var(--primary-green);
+    border-color: var(--primary-green);
+    background-color: #f0f7f7; /* Very subtle green tint */
     transform: translateY(-2px);
 }
 
@@ -131,7 +130,7 @@ body {
     margin-top: 4px;
 }
 
-/* STEWARDSHIP: Refined and "Hidden until Hover" feel */
+/* STEWARDSHIP */
 .stewardship-group {
     margin-top: 50px;
     background: white;
@@ -159,41 +158,47 @@ body {
 .steward-item {
     display: block;
     text-decoration: none;
-    padding: 15px 0;
-    border-bottom: 1px solid #f9f9f9;
+    padding: 15px 12px;
+    border-radius: 12px;
+    margin-bottom: 5px;
     transition: 0.3s;
 }
 
-.steward-item:last-child { border: none; }
+/* Stewardship Hover: Turns text and icon Green */
+.steward-item:hover {
+    background-color: #f9fbfb;
+}
 
 .steward-item span {
-    color: var(--primary-green);
+    color: var(--text-main);
     font-weight: 500;
     font-size: 0.9em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: color 0.3s ease;
+}
+
+.steward-item:hover span {
+    color: var(--primary-green);
 }
 
 .steward-item span i {
-    font-size: 0.7em;
-    opacity: 0;
+    font-size: 0.75em;
+    opacity: 0.2;
     transition: 0.3s;
-    transform: translateX(-10px);
 }
 
 .steward-item:hover span i {
-    opacity: 0.5;
-    transform: translateX(0);
+    opacity: 0.8;
+    transform: translateX(3px);
 }
 
 .steward-item small {
     color: #999;
-    display: block;
-    margin-top: 2px;
 }
 
-/* SOCIALS: Fluent and growing */
+/* SOCIALS */
 .social-fluent {
     margin-top: 60px;
     display: flex;
@@ -201,7 +206,12 @@ body {
     gap: 30px;
 }
 
-.social-fluent a { color: var(--primary-green); font-size: 1.4em; opacity: 0.3; transition: 0.4s; }
-.social-fluent a:hover { opacity: 1; transform: scale(1.2); }
+.social-fluent a { color: #ccc; font-size: 1.4em; transition: 0.3s; }
+
+/* Social Hover: Changes to Brand Green */
+.social-fluent a:hover { 
+    color: var(--primary-green); 
+    transform: scale(1.2); 
+}
 
 .copyright { font-size: 0.7em; color: #ccc; margin-top: 50px; padding-bottom: 20px; }
