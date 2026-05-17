@@ -1,0 +1,28 @@
+---
+layout: default
+title: The Reflection Room
+---
+
+<div class="hub-container">
+    <header>
+        <h2 class="logo-text">Life Giving</h2>
+        <h1 class="display-name">{{ page.title }}</h1>
+        <p class="tagline">Inner alignment & the I.I.D. framework</p>
+    </header>
+
+    <main>
+        <div class="section-group">
+            <h3 class="section-label">Reflections & Journaling</h3>
+            {% for post in site.categories.reflection-room %}
+                <a href="{{ post.url }}" class="btn secondary-btn">
+                    {{ post.title }}
+                    <small>{{ post.date | date: "%B %d, %Y" }}</small>
+                </a>
+            {% empty %}
+                <p style="font-size: 0.9em; color: #999; font-style: italic;">A new reflection will be shared here soon. Stay tuned.</p>
+            {% endfor %}
+        </div>
+        
+        <a href="/" class="btn primary-btn" style="margin-top: 30px;">Back to Hub</a>
+    </main>
+</div>
