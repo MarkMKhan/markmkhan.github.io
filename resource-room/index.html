@@ -1,0 +1,28 @@
+---
+layout: default
+title: The Resource Room
+---
+
+<div class="hub-container">
+    <header>
+        <h2 class="logo-text">Life Giving Repository</h2>
+        <h1 class="display-name">{{ page.title }}</h1>
+        <p class="tagline">Book summaries, one-pagers, and practical writing guides</p>
+    </header>
+
+    <main>
+        <div class="section-group">
+            <h3 class="section-label">Available Resources</h3>
+            {% for post in site.categories.resource-room %}
+                <a href="{{ post.url }}" class="btn secondary-btn">
+                    {{ post.title }}
+                    <small>{{ post.date | date: "%B %d, %Y" }}</small>
+                </a>
+            {% empty %}
+                <p style="font-size: 0.9em; color: #999; font-style: italic;">No tools uploaded yet.</p>
+            {% endfor %}
+        </div>
+        
+        <a href="/" class="btn primary-btn" style="margin-top: 30px;">Back to Hub</a>
+    </main>
+</div>
