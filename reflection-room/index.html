@@ -13,14 +13,17 @@ title: The Reflection Room
     <main>
         <div class="section-group">
             <h3 class="section-label">Reflections & Journaling</h3>
-            {% for post in site.categories.reflection-room %}
-                <a href="{{ post.url }}" class="btn secondary-btn">
-                    {{ post.title }}
-                    <small>{{ post.date | date: "%B %d, %Y" }}</small>
-                </a>
-            {% empty %}
+            
+            {% if site.categories['reflection-room'].size > 0 %}
+                {% for post in site.categories['reflection-room'] %}
+                    <a href="{{ post.url }}" class="btn secondary-btn">
+                        {{ post.title }}
+                        <small>{{ post.date | date: "%B %d, %Y" }}</small>
+                    </a>
+                {% endfor %}
+            {% else %}
                 <p style="font-size: 0.9em; color: #999; font-style: italic;">A new reflection will be shared here soon. Stay tuned.</p>
-            {% endfor %}
+            {% endif %}
         </div>
         
         <a href="/" class="btn primary-btn" style="margin-top: 30px;">Back to Hub</a>
