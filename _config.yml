@@ -1,0 +1,12 @@
+title: Mark Khan — Hub & Reflections
+description: Curating spaces for reflection & connection
+permalink: /:categories/:title/
+
+# This tells Jekyll to read your blog posts using clean formatting
+markdown: kramdown
+highlighter: rouge
+
+# This ensures GitHub compiles everything naturally
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
