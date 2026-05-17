@@ -13,14 +13,17 @@ title: The Wellbeing Room
     <main>
         <div class="section-group">
             <h3 class="section-label">Wellbeing & Health Notes</h3>
-            {% for post in site.categories.wellbeing-room %}
-                <a href="{{ post.url }}" class="btn secondary-btn">
-                    {{ post.title }}
-                    <small>{{ post.date | date: "%B %d, %Y" }}</small>
-                </a>
-            {% empty %}
+            
+            {% if site.categories['wellbeing-room'].size > 0 %}
+                {% for post in site.categories['wellbeing-room'] %}
+                    <a href="{{ post.url }}" class="btn secondary-btn">
+                        {{ post.title }}
+                        <small>{{ post.date | date: "%B %d, %Y" }}</small>
+                    </a>
+                {% endfor %}
+            {% else %}
                 <p style="font-size: 0.9em; color: #999; font-style: italic;">Insights on natural living coming soon.</p>
-            {% endfor %}
+            {% endif %}
         </div>
         
         <a href="/" class="btn primary-btn" style="margin-top: 30px;">Back to Hub</a>
