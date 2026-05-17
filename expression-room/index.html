@@ -1,1 +1,28 @@
+---
+layout: default
+title: The Expression Room
+---
 
+<div class="hub-container">
+    <header>
+        <h2 class="logo-text">Life Giving Connected</h2>
+        <h1 class="display-name">{{ page.title }}</h1>
+        <p class="tagline">Digital presence, voice, and intentional online tools</p>
+    </header>
+
+    <main>
+        <div class="section-group">
+            <h3 class="section-label">Shared Thoughts on Expression</h3>
+            {% for post in site.categories.expression-room %}
+                <a href="{{ post.url }}" class="btn secondary-btn">
+                    {{ post.title }}
+                    <small>{{ post.date | date: "%B %d, %Y" }}</small>
+                </a>
+            {% empty %}
+                <p style="font-size: 0.9em; color: #999; font-style: italic;">Notes on digital identity and presence coming soon.</p>
+            {% endfor %}
+        </div>
+        
+        <a href="/" class="btn primary-btn" style="margin-top: 30px;">Back to Hub</a>
+    </main>
+</div>
