@@ -13,14 +13,17 @@ title: The Expression Room
     <main>
         <div class="section-group">
             <h3 class="section-label">Shared Thoughts on Expression</h3>
-            {% for post in site.categories.expression-room %}
-                <a href="{{ post.url }}" class="btn secondary-btn">
-                    {{ post.title }}
-                    <small>{{ post.date | date: "%B %d, %Y" }}</small>
-                </a>
-            {% empty %}
+            
+            {% if site.categories['expression-room'].size > 0 %}
+                {% for post in site.categories['expression-room'] %}
+                    <a href="{{ post.url }}" class="btn secondary-btn">
+                        {{ post.title }}
+                        <small>{{ post.date | date: "%B %d, %Y" }}</small>
+                    </a>
+                {% endfor %}
+            {% else %}
                 <p style="font-size: 0.9em; color: #999; font-style: italic;">Notes on digital identity and presence coming soon.</p>
-            {% endfor %}
+            {% endif %}
         </div>
         
         <a href="/" class="btn primary-btn" style="margin-top: 30px;">Back to Hub</a>
