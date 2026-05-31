@@ -43,8 +43,7 @@ body {
     width: 100%; 
     height: 100%; 
     object-fit: cover; 
-    object-position: center 48%; 
-    transform: scale(0.85); /* This scales the photo down slightly inside the circle to create instant breathing room around your head */
+    object-position: center 38%; /* Safely anchors the frame exactly where your head has perfect breathing room */
 }
 .display-name { font-family: 'Merriweather', serif; font-size: 1.7em; color: var(--brand-green); margin: 0; font-weight: 300; }
 .facilitator-title { font-size: 0.7em; letter-spacing: 2px; text-transform: uppercase; color: #999; margin: 10px 0; }
