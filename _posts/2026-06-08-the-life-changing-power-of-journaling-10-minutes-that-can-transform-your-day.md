@@ -4,6 +4,8 @@ title: "The Life-Changing Power of Journaling: 10 Minutes That Can Transform You
 categories: reflection-room
 tags: [mental-clarity, spiritual-growth, iid-framework, habit-building]
 ---
+# The Life Giving Journal
+### The Life-Changing Power of Journaling: 10 Minutes That Can Transform Your Day
 
 Have you ever felt like your mind is running a hundred miles an hour? 
 
@@ -78,13 +80,12 @@ You don't need perfect words[cite: 1]. You just need a willingness to show up[ci
 
 ---
 
+---
+
 ### 📥 Shift From Mental Noise to Inner Clarity
 
-Ready to establish your own sustainable daily rhythm? Pull your thoughts out of everyday chaos and bring them into structured alignment[cite: 1]. Download our practical, one-page guide to establish your morning focus routine and anchor your day from the inside out[cite: 1].
+Ready to establish your own sustainable daily rhythm? Pull your thoughts out of everyday chaos and bring them into structured alignment. Download our practical, one-page guide to establish your morning focus routine and anchor your day from the inside out.
 
-<div style="text-align: center; margin: 2.5rem 0;">
-  <a href="https://lifegiving.online" target="_blank" style="background-color: #2e5a44; color: #ffffff; padding: 14px 32px; font-size: 1.15rem; font-weight: bold; text-decoration: none; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.08); display: inline-block; transition: background-color 0.2s ease;">
-    Download the 6-Step Daily Blueprint →
-  </a>
-  <p style="font-size: 0.85rem; color: #666; margin-top: 10px; font-style: italic;">Access your free master framework copy at lifegiving.online</p>
-</div>
+<a href="https://lifegiving.online" target="_blank" class="btn" style="background-color: #2e5a44; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; font-weight: bold;">Download the 6-Step Daily Blueprint →</a>
+
+<p style="font-size: 0.9em; font-style: italic; margin-top: 5px;">Access your free master framework copy at lifegiving.online</p>
