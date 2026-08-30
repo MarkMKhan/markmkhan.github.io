@@ -4,6 +4,8 @@ title: "About Mark Khan"
 permalink: /about/
 ---
 
+# About Mark Khan
+
 ### Inner Life Facilitator · Founder of Life Giving
 *Helping people return to who they truly are — from the inside out.*
 
